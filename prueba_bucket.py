@@ -4,9 +4,9 @@ import boto3
 import json
 
 # Configuracion las credenciales de AWS
-aws_access_key_id = 'AKIA52YRKZTVHPKBK72G'
-aws_secret_access_key = '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'
-bucket_name = 'eia-so-bucket-dev'
+aws_access_key_id = 'AKIA52YRKZTVDBLQ46N5'
+aws_secret_access_key = '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'
+bucket_name = 'so-bucket-brayantavo'
 
 s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
 
