@@ -4,10 +4,9 @@ import boto3
 import json
 
 # Configuracion las credenciales de AWS
-aws_access_key_id = 'AKIA52YRKZTVDBLQ46N5'
-aws_secret_access_key = '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'
-bucket_name = 'so-bucket-brayantavo'
-
+aws_access_key_id = os.get_env("ACCESS_KEY")
+aws_secret_access_key = os.get_env("SECRET_KEY")
+bucket_name = os.get_env("BUCKET_NAME")
 s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
 
 categories_url = "https://fakestoreapi.com/products/categories"
