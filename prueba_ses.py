@@ -2,8 +2,8 @@ import boto3
 from botocore.exceptions import ClientError
 
 #credenciales de acceso
-aws_access_key_id = 'AKIAQOF6SJBHBUTKUL6R'
-aws_secret_access_key = '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'
+aws_access_key_id = os.get_env("ACCESS_KEY")
+aws_secret_access_key = os.get_env("SECRET_KEY")
 region_name = 'us-east-1'
 
 #cliente de SES con las credenciales
@@ -15,8 +15,8 @@ ses = boto3.client(
 )
 
 # detalles del correo
-sender_email = 'brayan.estrada@eia.edu.co' 
-recipient_email = 'estradaramosb@gmail.com'
+sender_email = os.get_env("SENDER_EMAIL")
+recipient_email = os.get_env("RECIPIENT_EMAIL")
 subject = 'Ejemplo Mensaje SES 2'
 body_text = 'Este es un correo electrónico de prueba enviado desde Amazon SES.'
 
